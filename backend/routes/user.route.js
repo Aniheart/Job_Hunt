@@ -1,5 +1,5 @@
 import express from "express";
-
+import { singleUpload } from "../middlewares/multer.js";
 import isAuthenticated from "../middlewares/isAuthenticated.js";
 
 import {
@@ -11,7 +11,7 @@ import {
 
 const router = express.Router();
 
-router.route("/register").post(register);
+router.route("/register").post(singleUpload, register);
 
 router.route("/login").post(login);
 router.route("/logout").get(logout);
