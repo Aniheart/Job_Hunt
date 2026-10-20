@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 const allowedOrigins = [
-  "http://localhost:5173",
+  "https://job-hunt-1-3aah.onrender.com/",
   process.env.FRONTEND_URL,
 ].filter(Boolean);
 
